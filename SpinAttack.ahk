@@ -13,7 +13,7 @@ SetWorkingDir %A_ScriptDir%
 	LCtrl is the default slide key, change it if you need to.
 */
 meleeKey := "e"
-crouchKey := "LAlt"
+crouchKey := "LCtrl"
 triggerKey := "XButton2" ; This is the mouse forward button
 increaseKey := "!WheelUp" ; This is Alt+scroll up
 decreaseKey := "!WheelDown"
