@@ -5,7 +5,7 @@ SendMode Input
 SetWorkingDir %A_ScriptDir%  
 
 /*
-  Melee dps spam macro
+  Melee spam macro while walking forward
   Useful for completing "Carving spike" combo
 */
 
@@ -16,6 +16,7 @@ SetWorkingDir %A_ScriptDir%
 */
 spamKey := "e"
 meleeKey := "e"
+forwardKey := "w"
 disableKey := "7"
 
 frequency := 100
@@ -32,11 +33,14 @@ loop:
 		Send, %meleeKey%
 	else{
 		SetTimer, loop, Off
+		if (not GetKeyState(forwardKey,"P"))
+			Send, {%forwardKey% up}
 	}
 return
 
 startSpam:
 	SetTimer, loop, %period%
+	Send, {%forwardKey% down}
 return
 
 toggleLock:
