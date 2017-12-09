@@ -24,7 +24,7 @@ decreaseKey := "!WheelDown"
 	Attack options:
 */
 semiAuto := false ; write true to make it one click, one hit
-defaultSpeed := 3 ; Default number of hits/seconds see list of weapons tested
+defaultSpeed := 2.9 ; Default number of hits/seconds see list of weapons tested
 maxSpeed := 10 ; Range  of the max / min attack speed
 minSpeed := 0.5 
 minDelay := 0 ; Time between slide and spin attack
