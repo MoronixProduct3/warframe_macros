@@ -13,8 +13,8 @@ SetWorkingDir %A_ScriptDir%
 	Go to https://autohotkey.com/docs/KeyList.htm to find the list of controls
 	Modifiers are listed here : https://autohotkey.com/docs/Hotkeys.htm#Symbols
 */
-triggerKey := "LCtrl"
-crouchKey := "LCtrl"
+triggerKey := "LAlt"
+crouchKey := "LAlt"
 jumpKey := "Space"
 disableKey := "8"
 
