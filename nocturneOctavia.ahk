@@ -9,7 +9,7 @@ SetWorkingDir %A_ScriptDir%
 	Go to https://autohotkey.com/docs/KeyList.htm to find the list of controls
 	Modifiers are listed here : https://autohotkey.com/docs/Hotkeys.htm#Symbols
 */
-crouchKey := "LAlt"
+crouchKey := "LCtrl"
 metronomeKey := "3"
 forceNocturneKey := "XButton2"
 enableKey := "6"
