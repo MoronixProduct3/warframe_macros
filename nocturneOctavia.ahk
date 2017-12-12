@@ -15,7 +15,7 @@ forceNocturneKey := "XButton2"
 enableKey := "6"
 
 ;Octavia Stats
-abilityDuration := 100
+abilityDuration := 306
 
 ;Crouch tuning
 nbCrouch := 8
