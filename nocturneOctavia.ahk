@@ -15,7 +15,7 @@ forceNocturneKey := "XButton2"
 enableKey := "6"
 
 ;Octavia Stats
-abilityDuration := 100
+abilityDuration := 306
 
 ;Crouch tuning
 nbCrouch := 8
@@ -42,10 +42,22 @@ procNocturne:
 	}
 return
 
+bleepNocturne:
+	gosub procNocturne
+	SoundBeep, 660, 100
+	sleep, 50
+	SoundBeep, 660, 100
+return
+
 refreshMetronome:
 	Send %metronomeKey%
 return
 
+bleepMetronome:
+	gosub refreshMetronome
+	SoundBeep, 440, 100
+return
+	
 toggleEn:
 	if (disabled){
 		disabled := false
@@ -53,8 +65,8 @@ toggleEn:
 		sleep, 50
 		SoundBeep, 440, 100
 		
-		SetTimer, refreshMetronome, %metronomeDuration_ms%
-		SetTimer, procNocturne, %nocturneDuration_ms%
+		SetTimer, bleepMetronome, %metronomeDuration_ms%
+		SetTimer, bleepNocturne, %nocturneDuration_ms%
 		
 		gosub refreshMetronome
 		Sleep 500
@@ -66,7 +78,7 @@ toggleEn:
 		sleep, 50
 		SoundBeep, 400, 100
 		
-		SetTimer, refreshMetronome, Off
-		SetTimer, procNocturne, Off
+		SetTimer, bleepMetronome, Off
+		SetTimer, bleepNocturne, Off
 	}
 return
